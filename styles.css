@@ -4,18 +4,25 @@ body {
     padding: 0;
     background-color: white;
     color: black;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
-    text-align: center;
-    padding: 20px;
     background-color: orange;
     color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 2.5rem;
+.header-content {
+    text-align: center;
+}
+
+nav {
+    background-color: orangered;
 }
 
 nav ul {
@@ -23,7 +30,6 @@ nav ul {
     justify-content: center;
     list-style-type: none;
     padding: 0;
-    background-color: orangered;
     margin: 0;
 }
 
@@ -42,7 +48,11 @@ nav ul li a:hover {
 }
 
 main {
+    flex: 1;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 section {
@@ -50,13 +60,33 @@ section {
     border: 1px solid teal;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+}
+
+#skills ul {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+}
+
+#projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.project {
+    flex: 0 1 calc(100% - 10px);
+    background-color: lightgray;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
     border-bottom: 2px solid teal;
-    border-top: 2px solid teal;
     padding-bottom: 10px;
-    padding-top: 10px;
     color: teal;
     text-align: center;
 }
@@ -79,11 +109,11 @@ table th {
 }
 
 footer {
-    text-align: center;
-    padding: 5px;
     background-color: teal;
     color: white;
-    position: fixed;
+    text-align: center;
+    padding: 10px;
+    position: relative;
     bottom: 0;
     width: 100%;
 }
